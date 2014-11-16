@@ -1,0 +1,51 @@
+﻿/* Global style */
+
+body {
+    background-color: red;
+    color: green;
+}
+
+img {
+    width: inherit;
+}
+
+button {
+    border: groove;
+    color: red;
+    background-color: black;
+}
+
+/* Key Page Style */
+
+h1.head {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: large, bold;
+    color: red;
+}
+
+/* Style for a tablet */
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    body {
+        background: linear-gradient(red, blue);
+        color: white;
+    }
+
+
+    img {
+        width: 600px;
+    }
+}
+
+/* Style for a handheld phone */
+@media handheld and (min-width: 20em), screen and (min-width: 20em) {
+    body {
+        background-color: darkgreen;
+        color: white;
+    }
+
+
+    img {
+        width: 300px;
+    }
+}

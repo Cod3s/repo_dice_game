@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>digitaldicegame</title>
+
+    <!-- digitaldicegame references -->
+    <link href="css/index.css" rel="stylesheet" />  
+    
+    
+
+    <script type="text/javascript">
+
+        function test_picture() {
+            navigator.camera.getPicture(camera_success, camera_error, { saveToPhotoAlbum: true });
+        }
+
+        function grab_picture() {
+            navigator.camera.getPicture(camera_success, camera_error, { sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM });
+        }
+
+        function camera_success(image_data) {
+            var image = document.getElementById("test_image");
+            image.src = image_data;
+        }
+
+        function camera_error(message) {
+            alert('Failed due to :' + message);
+        }
+
+
+        function vibrate_test() {
+            navigator.vibrate(1000);
+            
+        }
+
+        document.addEventListener("deviceready", setup_page(), false);
+
+        function setup_page() {
+            //console.log("HEY LISTEN: " + device.cordova)
+        }
+
+    </script>
+
+</head>
+<body>
+    <p>Hello, your application is ready!</p>
+
+    <button onclick="test_picture()">Picture Test</button>
+    <button onclick="grab_picture()">Grab Picture</button>
+    <button onclick="vibrate_test()">Vibrate Test</button>
+
+    <img id="test_image" />
+
+    <a href="new_user.html">New User?</a>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
