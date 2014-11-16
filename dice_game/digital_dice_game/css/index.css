@@ -11,7 +11,7 @@ img {
 }
 
 button {
-    border: groove;
+    border: dashed;
     color: red;
     background-color: black;
 }
