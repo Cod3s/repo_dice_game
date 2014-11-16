@@ -131,6 +131,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="index.html" />
+    <Content Include="new_game.html" />
     <Content Include="new_user.html" />
     <Content Include="plugins\org.apache.cordova.camera\.fetch.json" />
     <Content Include="plugins\org.apache.cordova.camera\CONTRIBUTING.md" />
