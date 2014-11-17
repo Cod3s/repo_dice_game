@@ -41,7 +41,7 @@ h1.head {
 /* Style for a handheld phone */
 @media handheld and (min-width: 20em), screen and (min-width: 20em) {
     body {
-        background-color: darkgreen;
+        background-color: black;
         color: white;
     }
 
