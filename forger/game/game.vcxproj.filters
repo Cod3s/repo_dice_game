@@ -32,9 +32,6 @@
     <ClInclude Include="source\global_managers\memory\mem_team.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\global_managers\memory\memory_system.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="source\global_managers\memory\memory_manager.h">
       <Filter>Source Files</Filter>
     </ClInclude>

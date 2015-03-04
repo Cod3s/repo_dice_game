@@ -6,16 +6,38 @@
 
     <script type="text/javascript">
 
+        var default_name = "Name";
+
         function new_user_done() {
             alert("New Change to be reviewed.");
+        }
+
+        function name_entry_on_select() {
+            var text_item = document.getElementById("id_name_entry");
+
+            if (text_item.textContent == default_name) {
+                text_item.textContent = "";
+            }            
+        }
+
+        function name_entry_on_un_select() {
+            var text_item = document.getElementById("id_name_entry");
+
+            if (text_item.textContent == "") {
+                text_item.textContent = default_name;
+            }
+        }
+
+        function body_load_start() {
+            document.getElementById("id_name_entry").textContent = default_name;
         }
 
     </script>
 
 </head>
-<body>
+<body onload="body_load_start()">
     <h1 class="head">New User</h1>
-    <textarea id="id_name_entry">Name</textarea>
+    <textarea id="id_name_entry" onfocus="name_entry_on_select()" onblur="name_entry_on_un_select()"></textarea>
 
     <button onclick="new_user_done()">Done</button>
     

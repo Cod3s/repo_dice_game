@@ -1,7 +1,7 @@
 #include <SFML\Graphics.hpp>
 #include "global_managers\sf_manager.h"
 
-#include "global_managers\memory\memory_system.h"
+#include "global_managers\memory\memory_manager.h"
 
 int main()
 {

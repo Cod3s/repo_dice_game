@@ -12,7 +12,7 @@ c_memory_manager::~c_memory_manager()
 
 void c_memory_manager::initialize()
 {
-	// 1028 MB
+	// 1028 MB ~~ 1GB
 	global_memory_pool = malloc(1028 * 1000000);
 	char* cur_address = (char*)global_memory_pool;
 
