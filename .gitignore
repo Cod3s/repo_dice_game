@@ -17,7 +17,15 @@ $RECYCLE.BIN/
 # My additions
 *.suo
 Debug
+Release
 *.user
+*.sdf
+*.tlog
+*.log
+*.obj
+*.pbd
+*.opensdf
+*.cmake
 
 # =========================
 # Operating System Files

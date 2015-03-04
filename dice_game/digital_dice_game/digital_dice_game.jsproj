@@ -117,6 +117,8 @@
     <Content Include="merges\windows\scripts\platformOverrides.js" />
     <Content Include="merges\windows\scripts\winstore-jscompat.js" />
     <Folder Include="merges\wp8\" />
+    <Folder Include="resources\images\" />
+    <Folder Include="resources\videos\" />
     <Folder Include="res\icons\android\" />
     <Folder Include="res\icons\ios\" />
     <Folder Include="res\icons\wp8\" />
@@ -432,6 +434,7 @@
     <Content Include="plugins\org.apache.cordova.vibration\tests\tests.js" />
     <Content Include="plugins\org.apache.cordova.vibration\www\blackberry10\vibrate.js" />
     <Content Include="plugins\org.apache.cordova.vibration\www\vibration.js" />
+    <Content Include="scripts\custom\connection_manager.js" />
     <Content Include="scripts\index.js" />
     <Content Include="scripts\platformOverrides.js" />
     <Content Include="css\index.css" />
