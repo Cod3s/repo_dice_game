@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="common_interfaces">
+      <UniqueIdentifier>{a538e851-7d14-4ca0-9b48-a5a11d81f57a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -24,6 +27,9 @@
     <ClCompile Include="source\global_managers\memory\mem_team.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\common_interfaces\c_string.cpp">
+      <Filter>common_interfaces</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\global_managers\sf_manager.h">
@@ -34,6 +40,12 @@
     </ClInclude>
     <ClInclude Include="source\global_managers\memory\memory_manager.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\common_interfaces\i_file.h">
+      <Filter>common_interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="source\common_interfaces\c_string.h">
+      <Filter>common_interfaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

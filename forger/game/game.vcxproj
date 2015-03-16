@@ -98,11 +98,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\common_interfaces\c_string.cpp" />
     <ClCompile Include="source\global_managers\memory\memory_manager.cpp" />
     <ClCompile Include="source\global_managers\memory\mem_team.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\common_interfaces\c_string.h" />
+    <ClInclude Include="source\common_interfaces\i_file.h" />
     <ClInclude Include="source\global_managers\memory\memory_manager.h" />
     <ClInclude Include="source\global_managers\memory\mem_team.h" />
     <ClInclude Include="source\global_managers\sf_manager.h" />
