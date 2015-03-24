@@ -1,0 +1,17 @@
+﻿<Window x:Class="champ_guide.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:champ_guide.ViewModel"
+        xmlns:vw="clr-namespace:champ_guide.View"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:ChampionListViewModel}">
+            <vw:ChampionListView />
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Border Margin="4" Background="White" BorderBrush="Black" BorderThickness="1">
+            <ItemsControl ItemsSource="{Binding ViewModels}" Margin="4" />
+        </Border>
+    </Grid>
+</Window>
