@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DC2EE48B-FE9D-4F4F-9D55-F8A9CF3C2230}</ProjectGuid>
+    <ProjectGuid>{818841DE-F0C3-48C1-940E-46DCE0EA3BED}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>champ_guide</RootNamespace>
-    <AssemblyName>champ_guide</AssemblyName>
+    <RootNamespace>map_builder</RootNamespace>
+    <AssemblyName>map_builder</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,24 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CommonUtil\BasicCommand.cs" />
-    <Compile Include="CommonUtil\Extentions.cs" />
-    <Compile Include="CommonUtil\XmlParser.cs" />
-    <Compile Include="DataAccess\riot_api_interface.cs" />
-    <Compile Include="Model\c_champion_detail.cs" />
-    <Compile Include="ViewModel\ChampionDetailViewModel.cs" />
-    <Compile Include="ViewModel\ChampionListViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelBase.cs" />
-    <Compile Include="View\ChampionDetailView.xaml.cs">
-      <DependentUpon>ChampionDetailView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\ChampionListView.xaml.cs">
-      <DependentUpon>ChampionListView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\TestUserControl.xaml.cs">
-      <DependentUpon>TestUserControl.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,26 +62,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataAccess\champion_repo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\ChampionDetailView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ChampionListView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\TestUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\c_champion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -116,10 +85,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="code_gen_example.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>code_gen_example.h</LastGenOutput>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,19 +95,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Data\test_xml_file.xml">
-      <SubType>Designer</SubType>
-    </Resource>
+    <ProjectReference Include="..\shared_utility\shared_utility.csproj">
+      <Project>{23d90cb5-dbc5-4cd4-ba2b-8e2aaa88b9f0}</Project>
+      <Name>shared_utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="code_gen_example.h">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>code_gen_example.tt</DependentUpon>
-    </Content>
+    <Folder Include="Command\" />
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using champ_guide.DataAccess;
 using System.Collections.ObjectModel;
+using System.Xml;
 
 
 namespace champ_guide.ViewModel
@@ -14,6 +15,8 @@ namespace champ_guide.ViewModel
         readonly champion_repo _champ_repro;
 
         ObservableCollection<ViewModelBase> _view_models;
+
+        ObservableCollection<ViewModelBase> _champ_detail_view_model;
 
         public MainWindowViewModel()
         {
@@ -31,6 +34,21 @@ namespace champ_guide.ViewModel
                     _view_models = new ObservableCollection<ViewModelBase>();
                 }
                 return _view_models;
+            }          
+        }
+
+        public ObservableCollection<ViewModelBase> ChampionDetailViewModelInstance
+        {
+            get
+            {
+                if (_champ_detail_view_model == null)
+                {
+                    _champ_detail_view_model = new ObservableCollection<ViewModelBase>();
+                    ChampionDetailViewModel view_model = new ChampionDetailViewModel();
+                    _champ_detail_view_model.Add(view_model);
+                }
+
+                return _champ_detail_view_model;
             }
         }
     }

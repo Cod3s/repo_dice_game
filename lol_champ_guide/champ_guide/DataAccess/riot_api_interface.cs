@@ -70,8 +70,6 @@ namespace champ_guide.DataAccess
 
                         Stream response_stream = response.GetResponseStream();
 
-                        int x = 10;
-
                     }), temp_state);
         }
     }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ActivityOptions>
+  <Options>
+    <Option type="real" label="test_one">
+      <Values>
+        <Value>0.0</Value>
+        <Value>0.5</Value>
+        <Value>1.0</Value>
+        <Value>2.0</Value>
+      </Values>
+    </Option>
+    <Option type="bool" label="test_two">
+      <Values>
+        <Value>true</Value>
+        <Value>false</Value>
+      </Values>
+    </Option>
+    <Option type="blah">
+    </Option>
+    <Option type="foo" label="crap">
+      
+    </Option>
+  </Options>
+</ActivityOptions>

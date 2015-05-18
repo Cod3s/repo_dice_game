@@ -102,6 +102,7 @@
     <ClCompile Include="source\global_managers\memory\memory_manager.cpp" />
     <ClCompile Include="source\global_managers\memory\mem_team.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\states\c_main_menu_state.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\common_interfaces\c_string.h" />
@@ -109,6 +110,14 @@
     <ClInclude Include="source\global_managers\memory\memory_manager.h" />
     <ClInclude Include="source\global_managers\memory\mem_team.h" />
     <ClInclude Include="source\global_managers\sf_manager.h" />
+    <ClInclude Include="source\states\c_main_menu_state.h" />
+    <ClInclude Include="source\states\i_state.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="XMLSchema.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Xsd>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

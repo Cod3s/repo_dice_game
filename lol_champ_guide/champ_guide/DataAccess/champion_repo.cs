@@ -18,12 +18,13 @@ namespace champ_guide.DataAccess
                 _all_champions = new List<c_champion>();
             }
 
-            //_all_champions.Add(c_champion.CreateChampion("Zac"));
-            //_all_champions.Add(c_champion.CreateChampion("Ahri"));
-            //_all_champions.Add(c_champion.CreateChampion("Aatrox"));
+            _all_champions.Add(c_champion.CreateChampion("Aatrox", "Some dude who fights things. This is going to be a super long description to try to determine how my UI will work with a super long string that hopefully will wrap. Of course I should try to just change the menu width, but that's too much work... jk"));           
+            _all_champions.Add(c_champion.CreateChampion("Ahri", "Little miss Evee"));
+            _all_champions.Add(c_champion.CreateChampion("Zac", "Giant Blob of awesome"));
+                        
             // go out into the internet and retrieve the champ list
-            riot_api_interface.initialize();
-            riot_api_interface.get_all_champions();
+            //riot_api_interface.initialize();
+            //riot_api_interface.get_all_champions();
         }
 
         public List<c_champion> GetChampions()

@@ -16,6 +16,9 @@
     <Filter Include="common_interfaces">
       <UniqueIdentifier>{a538e851-7d14-4ca0-9b48-a5a11d81f57a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\states">
+      <UniqueIdentifier>{0f11aa9b-9cd0-47e7-b737-4b8823e528aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -29,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="source\common_interfaces\c_string.cpp">
       <Filter>common_interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="source\states\c_main_menu_state.cpp">
+      <Filter>Source Files\states</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,5 +53,16 @@
     <ClInclude Include="source\common_interfaces\c_string.h">
       <Filter>common_interfaces</Filter>
     </ClInclude>
+    <ClInclude Include="source\states\i_state.h">
+      <Filter>Source Files\states</Filter>
+    </ClInclude>
+    <ClInclude Include="source\states\c_main_menu_state.h">
+      <Filter>Source Files\states</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="XMLSchema.xsd">
+      <Filter>Header Files</Filter>
+    </Xsd>
   </ItemGroup>
 </Project>
