@@ -64,6 +64,7 @@
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\ChampionDetailView.xaml.cs">
       <DependentUpon>ChampionDetailView.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="View\ChampionListView.xaml.cs">
       <DependentUpon>ChampionListView.xaml</DependentUpon>
