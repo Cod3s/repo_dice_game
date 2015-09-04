@@ -149,6 +149,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\CGame.cpp" />
+    <ClCompile Include="source\game_states\c_main_menu_state.cpp" />
     <ClCompile Include="source\SGD Wrappers\CSGD_Direct3D.cpp" />
     <ClCompile Include="source\SGD Wrappers\CSGD_DirectInput.cpp" />
     <ClCompile Include="source\SGD Wrappers\CSGD_DirectSound.cpp" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\CGame.h" />
+    <ClInclude Include="source\game_states\c_main_menu_state.h" />
     <ClInclude Include="source\IGameState.h" />
     <ClInclude Include="source\SGD Wrappers\CSGD_Direct3D.h" />
     <ClInclude Include="source\SGD Wrappers\CSGD_DirectInput.h" />

@@ -9,6 +9,8 @@
 //#include "CMainMenuState.h"
 //#include "COptionsState.h"
 
+#include "game_states/c_main_menu_state.h"
+
 CGame::CGame(void)
 {
 	m_pD3D	= NULL;
@@ -58,12 +60,13 @@ void CGame::Initialize( HWND hWnd, HINSTANCE hInstance ,int nScreenWidth, int nS
 	m_pTM->InitTextureManager( m_pD3D->GetDirect3DDevice(), m_pD3D->GetSprite());
 	m_pDS->InitDirectSound( hWnd );
 	m_pWM->InitWaveManager(hWnd, m_pDS->GetDSObject());
-	m_pDI->InitDirectInput(hWnd, hInstance, DI_KEYBOARD);// | DI_MOUSE, DI_MOUSE);
+	m_pDI->InitDirectInput(hWnd, hInstance, DI_KEYBOARD | DI_MOUSE);// | DI_MOUSE, DI_MOUSE);
 
 	m_nWidth = nScreenWidth;
 	m_nHeight = nScreenHeight;
 
 	//ChangeState(CMainMenuState::GetInstance());
+	ChangeState(c_main_menu_state::GetInstance());
 	
 	m_nEffectVol	 = 5;
 	m_nSoundVol		 = 50;
@@ -112,7 +115,12 @@ bool CGame::Input(void)
 	//	m_pWM->Play(m_nSoundID);
 	//}
 
-	m_pState->Input();
+	bool result = m_pState->Input();
+
+	if (result == false)
+	{
+		return false;
+	}
 
 	if( m_pDI->KeyDown(DIK_LALT) || m_pDI->KeyDown(DIK_RALT))			//KeyPressed may work
 	{

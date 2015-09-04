@@ -19,6 +19,9 @@
     <Filter Include="SGD_Wrappers\Messages">
       <UniqueIdentifier>{c023f2e4-f801-4487-a1f4-1f009b65c8dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game States">
+      <UniqueIdentifier>{99c11253-f45b-4eb6-bd30-fd0ab7fbd71a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -50,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="source\SGD Wrappers\Messaging\CSGD_MessageSystem.cpp">
       <Filter>SGD_Wrappers\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="source\game_states\c_main_menu_state.cpp">
+      <Filter>Game States</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="source\SGD Wrappers\Messaging\Messages.h">
       <Filter>SGD_Wrappers\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="source\game_states\c_main_menu_state.h">
+      <Filter>Game States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
