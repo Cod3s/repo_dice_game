@@ -15,6 +15,7 @@
 
 const char* g_szWINDOW_CLASS_NAME	= "SGDWindowClass";			//	Window Class Name.
 
+#include "source/CGame.h"
 //#include "CGame.h"	// for our game class
 
 const char* g_szWINDOW_TITLE		= "Forger";	//	Window Title.
@@ -240,8 +241,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//////////////////////////////////////////
 
 	// TODO: Fix this
-	//CGame* pGame = CGame::GetInstance();
-	//pGame->Initialize(hWnd, hInstance, g_nWINDOW_WIDTH, g_nWINDOW_HEIGHT, g_bIS_WINDOWED);
+	CGame* pGame = CGame::GetInstance();
+	pGame->Initialize(hWnd, hInstance, g_nWINDOW_WIDTH, g_nWINDOW_HEIGHT, g_bIS_WINDOWED);
 
 
 	//////////////////////////////////////////
@@ -265,9 +266,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//////////////////////////////////
 		//	Put Game Logic Here
 		//////////////////////////////////
-		//if(pGame->Main() == false)
+		if(pGame->Main() == false)
 		{
-			//PostQuitMessage(0);
+			PostQuitMessage(0);
 		}
 		
 		
@@ -277,7 +278,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	/////////////////////////////////////////
 	//	Shutdown Game Here
 	/////////////////////////////////////////
-	//pGame->Shutdown();
+	pGame->Shutdown();
 	//pGame = NULL;
 
 	/////////////////////////////////////////
